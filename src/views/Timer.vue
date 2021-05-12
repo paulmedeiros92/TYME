@@ -1,6 +1,7 @@
 <template>
   <div class="time">
-    <h1>{{ time.format('HH:mm') }}</h1>
+    <h1>{{ timeDisplay }}</h1>
+    <h2 v-if="timezone">{{ timezone.code }}</h2>
     <h3>{{ time.format('MMMM DD dddd YYYY') }}</h3>
     <h5>{{ extraInfo }}</h5>
 
@@ -9,36 +10,31 @@
 
 <script lang="js">
 import { defineComponent } from 'vue';
+import Timezone from '@/time-zones/Timezone';
 
 export default defineComponent({
   props: {
-    offsetMinutes: {
-      type: Number,
+    timezone: {
+      type: Timezone,
       default: null,
-    },
-    code: {
-      type: String,
-      default: null,
-    },
-    name: {
-      type: String,
-      default: null,
-    },
-    country: {
-      type: String,
-      defualt: null,
     },
   },
   computed: {
     time() {
-      const { offsetMinutes } = this;
-      if (offsetMinutes === null) {
+      if (this.timezone === null) {
         return this.$store.state.time;
       }
+      const { offsetMinutes } = this.timezone;
       return this.$store.state.time.utcOffset(offsetMinutes);
     },
+    timeDisplay() {
+      return this.time.format('HH:mm');
+    },
     extraInfo() {
-      const { country, name } = this;
+      if (this.timezone === null) {
+        return 'Local';
+      }
+      const { country, name } = this.timezone;
       return `${country}, Timezone: ${name}`;
     },
   },

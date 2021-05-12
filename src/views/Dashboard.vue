@@ -7,8 +7,7 @@
       <Timer
         v-for="timezone in dashboard.timezones"
         :key="timezone.name"
-        :offsetMinutes="timezone.offsetMinutes"
-        :name="timezone.name"
+        :timezone="timezone"
       />
     </div>
     <label for="add-clock">Add a clock!</label>
@@ -27,8 +26,7 @@
     <div class="preview">
       <Timer
         v-if="selectedTime"
-        :offsetMinutes="selectedTime['utc-offset-seconds']"
-        :name="selectedTime.name"
+        :timezone="selectedTime"
       />
     </div>
     <button @click="addTimezone(selectedTime)">
@@ -39,6 +37,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Timezone from '@/time-zones/Timezone';
 import Timer from './Timer.vue';
 
 const timezones = require('../time-zones/time-zones.json');
@@ -53,12 +52,16 @@ export default defineComponent({
   data() {
     return {
       timezones,
-      selectedTime: null,
+      selectedTime: new Timezone(
+        timezones[0].code,
+        timezones[0].name,
+        timezones[0]['utc-offset-seconds'],
+      ),
       dashboard: {
         timezones: [
-          { offsetMinutes: 540, name: 'Japan Standard Time' },
-          { offsetMinutes: 0, name: 'Azores Summer Time' },
-          { offsetMinutes: 120, name: 'Eastern European Time' },
+          new Timezone('JST', 'Japan Standard Time', 540),
+          new Timezone('AZOST', 'Azores Summer Time', 0),
+          new Timezone('EET', 'Eastern European Time', 120),
 
         ],
       },
@@ -66,10 +69,19 @@ export default defineComponent({
   },
   methods: {
     setSelected(zoneCode) {
-      this.selectedTime = timezones.find((zone) => zone.code === zoneCode);
+      const timezone = timezones.find((zone) => zone.code === zoneCode);
+      return new Timezone(
+        timezone.code,
+        timezone.name,
+        timezone['utc-offset-seconds'],
+      );
     },
     addTimezone(timezone) {
       this.dashboard.timezones.push(timezone);
+    },
+    removeTimezone(timezone) {
+      this.dashboard.timezones = this.dashboard.timezones
+        .filter((zone) => zone.code !== timezone.code);
     },
   },
 });
