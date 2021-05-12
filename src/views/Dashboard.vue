@@ -4,9 +4,12 @@
       <Timer />
     </div>
     <div class="other-times">
-      <Timer :offsetMinutes="540" name="Japan Standard Time" />
-      <Timer :offsetMinutes="0" name="Azores Summer Time" />
-      <Timer :offsetMinutes="120" name="Eastern European Time" />
+      <Timer
+        v-for="timezone in dashboard.timezones"
+        :key="timezone.name"
+        :offsetMinutes="timezone.offsetMinutes"
+        :name="timezone.name"
+      />
     </div>
     <label for="add-clock">Add a clock!</label>
     <select
@@ -28,7 +31,9 @@
         :name="selectedTime.name"
       />
     </div>
-    <button>Add</button>
+    <button @click="addTimezone(selectedTime)">
+      Add
+    </button>
   </div>
 </template>
 
@@ -49,11 +54,22 @@ export default defineComponent({
     return {
       timezones,
       selectedTime: null,
+      dashboard: {
+        timezones: [
+          { offsetMinutes: 540, name: 'Japan Standard Time' },
+          { offsetMinutes: 0, name: 'Azores Summer Time' },
+          { offsetMinutes: 120, name: 'Eastern European Time' },
+
+        ],
+      },
     };
   },
   methods: {
     setSelected(zoneCode) {
       this.selectedTime = timezones.find((zone) => zone.code === zoneCode);
+    },
+    addTimezone(timezone) {
+      this.dashboard.timezones.push(timezone);
     },
   },
 });
