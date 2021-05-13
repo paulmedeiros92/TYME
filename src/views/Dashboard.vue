@@ -36,7 +36,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import { defineComponent } from 'vue';
 import Timezone from '@/time-zones/Timezone';
 import Timer from './Timer.vue';
@@ -70,7 +70,7 @@ export default defineComponent({
   methods: {
     setSelected(zoneCode) {
       const timezone = timezones.find((zone) => zone.code === zoneCode);
-      return new Timezone(
+      this.selectedTime = new Timezone(
         timezone.code,
         timezone.name,
         timezone['utc-offset-seconds'],
