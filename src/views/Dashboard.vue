@@ -60,10 +60,9 @@ export default defineComponent({
       ),
       dashboard: {
         timezones: [
-          new Timezone('JST', 'Japan Standard Time', 540),
-          new Timezone('AZOST', 'Azores Summer Time', 0),
-          new Timezone('EET', 'Eastern European Time', 120),
-
+          new Timezone('CEST', 'Central European SummerTime', 120),
+          new Timezone('EST', 'Eastern Standard Time', -300),
+          new Timezone('MDT', 'Mountain Daylight Time', -360),
         ],
       },
     };

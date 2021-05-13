@@ -7,10 +7,8 @@
       icon="times-circle"
     />
     <h1>{{ timeDisplay }}</h1>
-    <h2 v-if="timezone">{{ timezone.code }}</h2>
+    <h2>{{ timezoneDisplay }}</h2>
     <h3>{{ time.format('MMMM DD dddd YYYY') }}</h3>
-    <h5>{{ extraInfo }}</h5>
-
   </div>
 </template>
 
@@ -42,15 +40,15 @@ export default defineComponent({
       const { offsetMinutes } = this.timezone;
       return this.$store.state.time.utcOffset(offsetMinutes);
     },
-    timeDisplay() {
-      return this.time.format('HH:mm');
-    },
-    extraInfo() {
+    timezoneDisplay() {
       if (this.timezone === null) {
         return 'Local';
       }
-      const { country, name } = this.timezone;
-      return `${country}, Timezone: ${name}`;
+      const { code, name } = this.timezone;
+      return `${name} (${code})`;
+    },
+    timeDisplay() {
+      return this.time.format('HH:mm');
     },
   },
 });
