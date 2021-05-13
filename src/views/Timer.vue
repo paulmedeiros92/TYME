@@ -1,5 +1,11 @@
 <template>
-  <div class="time">
+  <div class="timer">
+    <fa-icon
+      v-if="close"
+      class="close"
+      @click="clickClose"
+      icon="times-circle"
+    />
     <h1>{{ timeDisplay }}</h1>
     <h2 v-if="timezone">{{ timezone.code }}</h2>
     <h3>{{ time.format('MMMM DD dddd YYYY') }}</h3>
@@ -17,6 +23,15 @@ export default defineComponent({
     timezone: {
       type: Timezone,
       default: null,
+    },
+    close: {
+      type: Function,
+      default: null,
+    },
+  },
+  methods: {
+    clickClose() {
+      this.close(this.timezone);
     },
   },
   computed: {
@@ -42,9 +57,17 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.time {
+.timer {
   border: solid black;
   flex-grow: 1;
   margin: 20px;
+  position: relative;
+
+  .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
 }
 </style>

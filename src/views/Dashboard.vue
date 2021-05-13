@@ -8,6 +8,7 @@
         v-for="timezone in dashboard.timezones"
         :key="timezone.name"
         :timezone="timezone"
+        :close="removeTimezone"
       />
     </div>
     <label for="add-clock">Add a clock!</label>
