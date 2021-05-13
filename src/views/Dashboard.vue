@@ -5,7 +5,7 @@
     </div>
     <div class="other-times">
       <Timer
-        v-for="timezone in dashboard.timezones"
+        v-for="timezone in dashTimezones"
         :key="timezone.name"
         :timezone="timezone"
         :close="removeTimezone"
@@ -48,6 +48,7 @@ export default defineComponent({
     Timer,
   },
   mounted() {
+    this.$store.dispatch('loadCookie');
     this.$store.dispatch('startTimer');
   },
   data() {
@@ -58,13 +59,6 @@ export default defineComponent({
         timezones[0].name,
         timezones[0]['utc-offset-seconds'],
       ),
-      dashboard: {
-        timezones: [
-          new Timezone('CEST', 'Central European SummerTime', 120),
-          new Timezone('EST', 'Eastern Standard Time', -300),
-          new Timezone('MDT', 'Mountain Daylight Time', -360),
-        ],
-      },
     };
   },
   methods: {
@@ -77,11 +71,15 @@ export default defineComponent({
       );
     },
     addTimezone(timezone) {
-      this.dashboard.timezones.push(timezone);
+      this.$store.dispatch('addZone', timezone);
     },
     removeTimezone(timezone) {
-      this.dashboard.timezones = this.dashboard.timezones
-        .filter((zone) => zone.code !== timezone.code);
+      this.$store.dispatch('removeZone', timezone);
+    },
+  },
+  computed: {
+    dashTimezones() {
+      return this.$store.state.timezones;
     },
   },
 });
