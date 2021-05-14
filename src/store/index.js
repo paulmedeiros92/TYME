@@ -22,11 +22,15 @@ export default createStore({
       state.timezones = zoneArray;
     },
     addTimezone(state, timezone) {
-      state.timezones = [...state.timezones, timezone];
+      const timezones = [...state.timezones, timezone];
+      state.timezones = timezones;
+      Cookies.set('timezones', JSON.stringify(timezones));
     },
     removeTimezone(state, timezone) {
-      state.timezones = state.timezones
+      const timezones = state.timezones
         .filter((zone) => zone.code !== timezone.code);
+      state.timezones = timezones;
+      Cookies.set('timezones', JSON.stringify(timezones));
     },
   },
   actions: {
