@@ -11,28 +11,7 @@
         :close="removeTimezone"
       />
     </div>
-    <label for="add-clock">Add a clock!</label>
-    <select
-      id="add-clock"
-      @input="setSelected($event.target.value)"
-    >
-      <option
-        v-for="timezone in timezones"
-        :key="timezone.code"
-        :value="timezone.code"
-      >
-        {{ timezone.name }}
-      </option>
-    </select>
-    <div class="preview">
-      <Timer
-        v-if="selectedTime"
-        :timezone="selectedTime"
-      />
-    </div>
-    <button @click="addTimezone(selectedTime)">
-      Add
-    </button>
+    <Search :selectedZone="selectedTime" />
   </div>
 </template>
 
@@ -40,12 +19,14 @@
 import { defineComponent } from 'vue';
 import Timezone from '@/time-zones/Timezone';
 import Timer from './Timer.vue';
+import Search from './Search.vue';
 
 const timezones = require('../time-zones/time-zones.json');
 
 export default defineComponent({
   components: {
     Timer,
+    Search,
   },
   mounted() {
     this.$store.dispatch('loadCookie');
@@ -57,7 +38,7 @@ export default defineComponent({
       selectedTime: new Timezone(
         timezones[0].code,
         timezones[0].name,
-        timezones[0]['utc-offset-seconds'],
+        timezones[0].offsetMinutes,
       ),
     };
   },
@@ -67,7 +48,7 @@ export default defineComponent({
       this.selectedTime = new Timezone(
         timezone.code,
         timezone.name,
-        timezone['utc-offset-seconds'],
+        timezone.offsetMinutes,
       );
     },
     addTimezone(timezone) {

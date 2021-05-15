@@ -5,7 +5,7 @@
     "countries": [
       "Australia"
     ],
-    "utc-offset-seconds": 630.0
+    "offsetMinutes": 630.0
   },
   {
     "code": "ACST",
@@ -13,7 +13,7 @@
     "countries": [
       "Australia"
     ],
-    "utc-offset-seconds": 570.0
+    "offsetMinutes": 570.0
   },
   {
     "code": "ACT",
@@ -21,7 +21,7 @@
     "countries": [
       "Brazil"
     ],
-    "utc-offset-seconds": -300.0
+    "offsetMinutes": -300.0
   },
   {
     "code": "ACWST",
@@ -29,7 +29,7 @@
     "countries": [
       "Australia"
     ],
-    "utc-offset-seconds": 525.0
+    "offsetMinutes": 525.0
   },
   {
     "code": "ADT",
@@ -40,7 +40,7 @@
       "Greenland",
       "Bermuda"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "AEDT",
@@ -49,7 +49,7 @@
       "Australia",
       "Antarctica"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "AEST",
@@ -57,7 +57,7 @@
     "countries": [
       "Australia"
     ],
-    "utc-offset-seconds": 600.0
+    "offsetMinutes": 600.0
   },
   {
     "code": "AFT",
@@ -65,7 +65,7 @@
     "countries": [
       "Afghanistan"
     ],
-    "utc-offset-seconds": 270.0
+    "offsetMinutes": 270.0
   },
   {
     "code": "AKDT",
@@ -74,7 +74,7 @@
       "United States",
       "Canada"
     ],
-    "utc-offset-seconds": -480.0
+    "offsetMinutes": -480.0
   },
   {
     "code": "AKST",
@@ -83,7 +83,7 @@
       "United States",
       "Canada"
     ],
-    "utc-offset-seconds": -540.0
+    "offsetMinutes": -540.0
   },
   {
     "code": "ALMT",
@@ -91,7 +91,7 @@
     "countries": [
       "Kazakhstan"
     ],
-    "utc-offset-seconds": 360.0
+    "offsetMinutes": 360.0
   },
   {
     "code": "AMST",
@@ -99,7 +99,7 @@
     "countries": [
       "Brazil"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "AMT",
@@ -107,7 +107,7 @@
     "countries": [
       "Brazil"
     ],
-    "utc-offset-seconds": -240.0
+    "offsetMinutes": -240.0
   },
   {
     "code": "AMT",
@@ -115,7 +115,7 @@
     "countries": [
       "Armenia"
     ],
-    "utc-offset-seconds": 240.0
+    "offsetMinutes": 240.0
   },
   {
     "code": "ANAT",
@@ -123,7 +123,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "AQTT",
@@ -131,7 +131,7 @@
     "countries": [
       "Kazakhstan"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "ART",
@@ -140,7 +140,7 @@
       "Argentina",
       "Antarctica"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "AST",
@@ -173,7 +173,7 @@
       "British Virgin Islands",
       "Bermuda"
     ],
-    "utc-offset-seconds": -240.0
+    "offsetMinutes": -240.0
   },
   {
     "code": "AST",
@@ -186,7 +186,7 @@
       "Qatar",
       "Saudi Arabia"
     ],
-    "utc-offset-seconds": 180.0
+    "offsetMinutes": 180.0
   },
   {
     "code": "AWST",
@@ -194,7 +194,7 @@
     "countries": [
       "Australia"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "AZOST",
@@ -202,7 +202,7 @@
     "countries": [
       "Portugal"
     ],
-    "utc-offset-seconds": 0.0
+    "offsetMinutes": 0.0
   },
   {
     "code": "AZOT",
@@ -210,7 +210,7 @@
     "countries": [
       "Portugal"
     ],
-    "utc-offset-seconds": -60.0
+    "offsetMinutes": -60.0
   },
   {
     "code": "AZT",
@@ -218,7 +218,7 @@
     "countries": [
       "Azerbaijan"
     ],
-    "utc-offset-seconds": 240.0
+    "offsetMinutes": 240.0
   },
   {
     "code": "BNT",
@@ -226,7 +226,7 @@
     "countries": [
       "Brunei"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "BOT",
@@ -234,7 +234,7 @@
     "countries": [
       "Bolivia"
     ],
-    "utc-offset-seconds": -240.0
+    "offsetMinutes": -240.0
   },
   {
     "code": "BRST",
@@ -242,7 +242,7 @@
     "countries": [
       "Brazil"
     ],
-    "utc-offset-seconds": -120.0
+    "offsetMinutes": -120.0
   },
   {
     "code": "BRT",
@@ -250,7 +250,7 @@
     "countries": [
       "Brazil"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "BST",
@@ -261,7 +261,7 @@
       "Jersey",
       "United Kingdom"
     ],
-    "utc-offset-seconds": 60.0
+    "offsetMinutes": 60.0
   },
   {
     "code": "BST",
@@ -269,7 +269,7 @@
     "countries": [
       "Bangladesh"
     ],
-    "utc-offset-seconds": 360.0
+    "offsetMinutes": 360.0
   },
   {
     "code": "BTT",
@@ -277,7 +277,7 @@
     "countries": [
       "Bhutan"
     ],
-    "utc-offset-seconds": 360.0
+    "offsetMinutes": 360.0
   },
   {
     "code": "CAST",
@@ -285,7 +285,7 @@
     "countries": [
       "Antarctica"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "CAT",
@@ -302,7 +302,7 @@
       "Mozambique",
       "Namibia"
     ],
-    "utc-offset-seconds": 120.0
+    "offsetMinutes": 120.0
   },
   {
     "code": "CCT",
@@ -310,7 +310,7 @@
     "countries": [
       "Cocos (Keeling) Islands"
     ],
-    "utc-offset-seconds": 390.0
+    "offsetMinutes": 390.0
   },
   {
     "code": "CDT",
@@ -318,7 +318,7 @@
     "countries": [
       "Cuba"
     ],
-    "utc-offset-seconds": -240.0
+    "offsetMinutes": -240.0
   },
   {
     "code": "CDT",
@@ -328,15 +328,7 @@
       "Mexico",
       "Canada"
     ],
-    "utc-offset-seconds": -300.0
-  },
-  {
-    "code": "CEST",
-    "name": "Central European Summertime",
-    "countries": [
-      "Antarctica"
-    ],
-    "utc-offset-seconds": 120.0
+    "offsetMinutes": -300.0
   },
   {
     "code": "CEST",
@@ -374,9 +366,10 @@
       "Croatia",
       "Switzerland",
       "Kosovo",
-      "Norway"
+      "Norway",
+      "Antarctica"
     ],
-    "utc-offset-seconds": 120.0
+    "offsetMinutes": 120.0
   },
   {
     "code": "CET",
@@ -418,7 +411,7 @@
       "Kosovo",
       "Norway"
     ],
-    "utc-offset-seconds": 60.0
+    "offsetMinutes": 60.0
   },
   {
     "code": "CHADT",
@@ -426,7 +419,7 @@
     "countries": [
       "New Zealand"
     ],
-    "utc-offset-seconds": 825.0
+    "offsetMinutes": 825.0
   },
   {
     "code": "CHAST",
@@ -434,7 +427,7 @@
     "countries": [
       "New Zealand"
     ],
-    "utc-offset-seconds": 765.0
+    "offsetMinutes": 765.0
   },
   {
     "code": "CHOT",
@@ -442,7 +435,7 @@
     "countries": [
       "Mongolia"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "CHST",
@@ -451,7 +444,7 @@
       "Guam",
       "Northern Mariana Islands"
     ],
-    "utc-offset-seconds": 600.0
+    "offsetMinutes": 600.0
   },
   {
     "code": "CHUT",
@@ -459,7 +452,7 @@
     "countries": [
       "Federated States of Micronesia"
     ],
-    "utc-offset-seconds": 600.0
+    "offsetMinutes": 600.0
   },
   {
     "code": "CIT",
@@ -467,7 +460,7 @@
     "countries": [
       "Indonesia"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "CKT",
@@ -475,7 +468,7 @@
     "countries": [
       "Cook Islands"
     ],
-    "utc-offset-seconds": -600.0
+    "offsetMinutes": -600.0
   },
   {
     "code": "CLST",
@@ -483,7 +476,7 @@
     "countries": [
       "Chile"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "CLT",
@@ -491,7 +484,7 @@
     "countries": [
       "Chile"
     ],
-    "utc-offset-seconds": -240.0
+    "offsetMinutes": -240.0
   },
   {
     "code": "COT",
@@ -499,7 +492,7 @@
     "countries": [
       "Colombia"
     ],
-    "utc-offset-seconds": -300.0
+    "offsetMinutes": -300.0
   },
   {
     "code": "CST",
@@ -507,7 +500,7 @@
     "countries": [
       "Cuba"
     ],
-    "utc-offset-seconds": -300.0
+    "offsetMinutes": -300.0
   },
   {
     "code": "CST",
@@ -523,7 +516,7 @@
       "Canada",
       "Honduras"
     ],
-    "utc-offset-seconds": -360.0
+    "offsetMinutes": -360.0
   },
   {
     "code": "CST",
@@ -533,7 +526,7 @@
       "China",
       "Taiwan"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "CVT",
@@ -541,7 +534,7 @@
     "countries": [
       "Cape Verde"
     ],
-    "utc-offset-seconds": -60.0
+    "offsetMinutes": -60.0
   },
   {
     "code": "CXT",
@@ -549,7 +542,7 @@
     "countries": [
       "Christmas Island"
     ],
-    "utc-offset-seconds": 420.0
+    "offsetMinutes": 420.0
   },
   {
     "code": "DAVT",
@@ -557,7 +550,7 @@
     "countries": [
       "Antarctica"
     ],
-    "utc-offset-seconds": 420.0
+    "offsetMinutes": 420.0
   },
   {
     "code": "DDUT",
@@ -565,7 +558,7 @@
     "countries": [
       "Antarctica"
     ],
-    "utc-offset-seconds": 600.0
+    "offsetMinutes": 600.0
   },
   {
     "code": "EASST",
@@ -573,7 +566,7 @@
     "countries": [
       "Chile"
     ],
-    "utc-offset-seconds": -300.0
+    "offsetMinutes": -300.0
   },
   {
     "code": "EAST",
@@ -581,7 +574,7 @@
     "countries": [
       "Chile"
     ],
-    "utc-offset-seconds": -360.0
+    "offsetMinutes": -360.0
   },
   {
     "code": "EAT",
@@ -599,7 +592,7 @@
       "Comoros",
       "Mayotte"
     ],
-    "utc-offset-seconds": 180.0
+    "offsetMinutes": 180.0
   },
   {
     "code": "ECT",
@@ -607,7 +600,7 @@
     "countries": [
       "Ecuador"
     ],
-    "utc-offset-seconds": -300.0
+    "offsetMinutes": -300.0
   },
   {
     "code": "EDT",
@@ -619,7 +612,7 @@
       "Haiti",
       "Canada"
     ],
-    "utc-offset-seconds": -240.0
+    "offsetMinutes": -240.0
   },
   {
     "code": "EEST",
@@ -641,7 +634,7 @@
       "Estonia",
       "Lithuania"
     ],
-    "utc-offset-seconds": 180.0
+    "offsetMinutes": 180.0
   },
   {
     "code": "EET",
@@ -666,7 +659,7 @@
       "Estonia",
       "Lithuania"
     ],
-    "utc-offset-seconds": 120.0
+    "offsetMinutes": 120.0
   },
   {
     "code": "EGST",
@@ -674,7 +667,7 @@
     "countries": [
       "Greenland"
     ],
-    "utc-offset-seconds": 0.0
+    "offsetMinutes": 0.0
   },
   {
     "code": "EGT",
@@ -682,7 +675,7 @@
     "countries": [
       "Greenland"
     ],
-    "utc-offset-seconds": -60.0
+    "offsetMinutes": -60.0
   },
   {
     "code": "EIT",
@@ -690,7 +683,7 @@
     "countries": [
       "Indonesia"
     ],
-    "utc-offset-seconds": 540.0
+    "offsetMinutes": 540.0
   },
   {
     "code": "EST",
@@ -706,7 +699,7 @@
       "Haiti",
       "Canada"
     ],
-    "utc-offset-seconds": -300.0
+    "offsetMinutes": -300.0
   },
   {
     "code": "FJDT",
@@ -714,7 +707,7 @@
     "countries": [
       "Fiji"
     ],
-    "utc-offset-seconds": 780.0
+    "offsetMinutes": 780.0
   },
   {
     "code": "FJT",
@@ -722,7 +715,7 @@
     "countries": [
       "Fiji"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "FKT",
@@ -730,7 +723,7 @@
     "countries": [
       "Falkland Islands"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "GALT",
@@ -738,7 +731,7 @@
     "countries": [
       "Ecuador"
     ],
-    "utc-offset-seconds": -360.0
+    "offsetMinutes": -360.0
   },
   {
     "code": "GAMT",
@@ -746,7 +739,7 @@
     "countries": [
       "French Polynesia"
     ],
-    "utc-offset-seconds": -540.0
+    "offsetMinutes": -540.0
   },
   {
     "code": "GET",
@@ -754,7 +747,7 @@
     "countries": [
       "Georgia"
     ],
-    "utc-offset-seconds": 240.0
+    "offsetMinutes": 240.0
   },
   {
     "code": "GFT",
@@ -762,7 +755,7 @@
     "countries": [
       "French Guiana"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "GILT",
@@ -770,7 +763,7 @@
     "countries": [
       "Kiribati"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "GMT",
@@ -798,7 +791,7 @@
       "Jersey",
       "United Kingdom"
     ],
-    "utc-offset-seconds": 0.0
+    "offsetMinutes": 0.0
   },
   {
     "code": "GST",
@@ -806,7 +799,7 @@
     "countries": [
       "South Georgia and South Sandwich Islands"
     ],
-    "utc-offset-seconds": -120.0
+    "offsetMinutes": -120.0
   },
   {
     "code": "GST",
@@ -815,7 +808,7 @@
       "United Arab Emirates",
       "Oman"
     ],
-    "utc-offset-seconds": 240.0
+    "offsetMinutes": 240.0
   },
   {
     "code": "GYT",
@@ -823,7 +816,7 @@
     "countries": [
       "Guyana"
     ],
-    "utc-offset-seconds": -240.0
+    "offsetMinutes": -240.0
   },
   {
     "code": "HDT",
@@ -831,7 +824,7 @@
     "countries": [
       "United States"
     ],
-    "utc-offset-seconds": -540.0
+    "offsetMinutes": -540.0
   },
   {
     "code": "HKT",
@@ -839,7 +832,7 @@
     "countries": [
       "Hong Kong"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "HOVT",
@@ -847,7 +840,7 @@
     "countries": [
       "Mongolia"
     ],
-    "utc-offset-seconds": 420.0
+    "offsetMinutes": 420.0
   },
   {
     "code": "HST",
@@ -855,7 +848,7 @@
     "countries": [
       "United States"
     ],
-    "utc-offset-seconds": -600.0
+    "offsetMinutes": -600.0
   },
   {
     "code": "ICT",
@@ -863,7 +856,7 @@
     "countries": [
       "British Indian Ocean Territory"
     ],
-    "utc-offset-seconds": 360.0
+    "offsetMinutes": 360.0
   },
   {
     "code": "ICT",
@@ -874,7 +867,7 @@
       "Cambodia",
       "Laos"
     ],
-    "utc-offset-seconds": 420.0
+    "offsetMinutes": 420.0
   },
   {
     "code": "IDT",
@@ -882,7 +875,7 @@
     "countries": [
       "Israel"
     ],
-    "utc-offset-seconds": 180.0
+    "offsetMinutes": 180.0
   },
   {
     "code": "IRDT",
@@ -890,7 +883,7 @@
     "countries": [
       "Iran"
     ],
-    "utc-offset-seconds": 270.0
+    "offsetMinutes": 270.0
   },
   {
     "code": "IRKT",
@@ -898,7 +891,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "IRST",
@@ -906,7 +899,7 @@
     "countries": [
       "Iran"
     ],
-    "utc-offset-seconds": 210.0
+    "offsetMinutes": 210.0
   },
   {
     "code": "IST",
@@ -914,7 +907,7 @@
     "countries": [
       "Ireland"
     ],
-    "utc-offset-seconds": 120.0
+    "offsetMinutes": 120.0
   },
   {
     "code": "IST",
@@ -922,7 +915,7 @@
     "countries": [
       "Israel"
     ],
-    "utc-offset-seconds": 120.0
+    "offsetMinutes": 120.0
   },
   {
     "code": "IST",
@@ -930,7 +923,7 @@
     "countries": [
       "India"
     ],
-    "utc-offset-seconds": 330.0
+    "offsetMinutes": 330.0
   },
   {
     "code": "JST",
@@ -938,7 +931,7 @@
     "countries": [
       "Japan"
     ],
-    "utc-offset-seconds": 540.0
+    "offsetMinutes": 540.0
   },
   {
     "code": "KGT",
@@ -946,7 +939,7 @@
     "countries": [
       "Kyrgyzstan"
     ],
-    "utc-offset-seconds": 360.0
+    "offsetMinutes": 360.0
   },
   {
     "code": "KOST",
@@ -954,7 +947,7 @@
     "countries": [
       "Federated States of Micronesia"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "KRAT",
@@ -962,7 +955,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 420.0
+    "offsetMinutes": 420.0
   },
   {
     "code": "KST",
@@ -971,7 +964,7 @@
       "North Korea",
       "South Korea"
     ],
-    "utc-offset-seconds": 540.0
+    "offsetMinutes": 540.0
   },
   {
     "code": "LHDT",
@@ -979,7 +972,7 @@
     "countries": [
       "Australia"
     ],
-    "utc-offset-seconds": 690.0
+    "offsetMinutes": 690.0
   },
   {
     "code": "LHST",
@@ -987,7 +980,7 @@
     "countries": [
       "Australia"
     ],
-    "utc-offset-seconds": 630.0
+    "offsetMinutes": 630.0
   },
   {
     "code": "LINT",
@@ -995,7 +988,7 @@
     "countries": [
       "Kiribati"
     ],
-    "utc-offset-seconds": 840.0
+    "offsetMinutes": 840.0
   },
   {
     "code": "MART",
@@ -1003,7 +996,7 @@
     "countries": [
       "French Polynesia"
     ],
-    "utc-offset-seconds": -570.0
+    "offsetMinutes": -570.0
   },
   {
     "code": "MAWT",
@@ -1011,7 +1004,7 @@
     "countries": [
       "Antarctica"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "MDT",
@@ -1021,7 +1014,7 @@
       "Mexico",
       "United States"
     ],
-    "utc-offset-seconds": -360.0
+    "offsetMinutes": -360.0
   },
   {
     "code": "MHT",
@@ -1029,7 +1022,7 @@
     "countries": [
       "Marshall Islands"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "MMT",
@@ -1037,7 +1030,7 @@
     "countries": [
       "Sri Lanka"
     ],
-    "utc-offset-seconds": 330.0
+    "offsetMinutes": 330.0
   },
   {
     "code": "MMT",
@@ -1045,7 +1038,7 @@
     "countries": [
       "Burma"
     ],
-    "utc-offset-seconds": 390.0
+    "offsetMinutes": 390.0
   },
   {
     "code": "MSK",
@@ -1055,7 +1048,7 @@
       "Belarus",
       "Ukraine"
     ],
-    "utc-offset-seconds": 180.0
+    "offsetMinutes": 180.0
   },
   {
     "code": "MST",
@@ -1065,7 +1058,7 @@
       "Mexico",
       "United States"
     ],
-    "utc-offset-seconds": -420.0
+    "offsetMinutes": -420.0
   },
   {
     "code": "MUT",
@@ -1073,7 +1066,7 @@
     "countries": [
       "Mauritius"
     ],
-    "utc-offset-seconds": 240.0
+    "offsetMinutes": 240.0
   },
   {
     "code": "MVT",
@@ -1081,7 +1074,7 @@
     "countries": [
       "Maldives"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "MYT",
@@ -1089,7 +1082,7 @@
     "countries": [
       "Malaysia"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "NCT",
@@ -1097,7 +1090,7 @@
     "countries": [
       "New Caledonia"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "NDT",
@@ -1105,7 +1098,7 @@
     "countries": [
       "Canada"
     ],
-    "utc-offset-seconds": -150.0
+    "offsetMinutes": -150.0
   },
   {
     "code": "NFDT",
@@ -1113,7 +1106,7 @@
     "countries": [
       "Norfolk Island"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "NFT",
@@ -1121,7 +1114,7 @@
     "countries": [
       "Norfolk Island"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "NOVT",
@@ -1129,7 +1122,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 420.0
+    "offsetMinutes": 420.0
   },
   {
     "code": "NPT",
@@ -1137,7 +1130,7 @@
     "countries": [
       "Nepal"
     ],
-    "utc-offset-seconds": 345.0
+    "offsetMinutes": 345.0
   },
   {
     "code": "NRT",
@@ -1145,7 +1138,7 @@
     "countries": [
       "Nauru"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "NST",
@@ -1153,7 +1146,7 @@
     "countries": [
       "Canada"
     ],
-    "utc-offset-seconds": -210.0
+    "offsetMinutes": -210.0
   },
   {
     "code": "NUT",
@@ -1161,7 +1154,7 @@
     "countries": [
       "Niue"
     ],
-    "utc-offset-seconds": -660.0
+    "offsetMinutes": -660.0
   },
   {
     "code": "NZDT",
@@ -1170,7 +1163,7 @@
       "Antarctica",
       "New Zealand"
     ],
-    "utc-offset-seconds": 780.0
+    "offsetMinutes": 780.0
   },
   {
     "code": "NZDT",
@@ -1178,7 +1171,7 @@
     "countries": [
       "Antarctica"
     ],
-    "utc-offset-seconds": 180.0
+    "offsetMinutes": 180.0
   },
   {
     "code": "NZST",
@@ -1187,7 +1180,7 @@
       "Antarctica",
       "New Zealand"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "OMST",
@@ -1195,7 +1188,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 360.0
+    "offsetMinutes": 360.0
   },
   {
     "code": "ORAT",
@@ -1203,7 +1196,7 @@
     "countries": [
       "Kazakhstan"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "PDT",
@@ -1212,7 +1205,7 @@
       "United States",
       "Canada"
     ],
-    "utc-offset-seconds": -420.0
+    "offsetMinutes": -420.0
   },
   {
     "code": "PET",
@@ -1220,7 +1213,7 @@
     "countries": [
       "Peru"
     ],
-    "utc-offset-seconds": -300.0
+    "offsetMinutes": -300.0
   },
   {
     "code": "PETT",
@@ -1228,7 +1221,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "PGT",
@@ -1236,7 +1229,7 @@
     "countries": [
       "Papua New Guinea"
     ],
-    "utc-offset-seconds": 600.0
+    "offsetMinutes": 600.0
   },
   {
     "code": "PHOT",
@@ -1244,7 +1237,7 @@
     "countries": [
       "Kiribati"
     ],
-    "utc-offset-seconds": 780.0
+    "offsetMinutes": 780.0
   },
   {
     "code": "PHT",
@@ -1252,7 +1245,7 @@
     "countries": [
       "Philippines"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "PKT",
@@ -1260,7 +1253,7 @@
     "countries": [
       "Pakistan"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "PMDT",
@@ -1268,7 +1261,7 @@
     "countries": [
       "Saint Pierre and Miquelon"
     ],
-    "utc-offset-seconds": -120.0
+    "offsetMinutes": -120.0
   },
   {
     "code": "PMST",
@@ -1276,7 +1269,7 @@
     "countries": [
       "Saint Pierre and Miquelon"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "PONT",
@@ -1284,17 +1277,17 @@
     "countries": [
       "Federated States of Micronesia"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "PST",
-    "name": "Pitcairn Standard Time",
+    "name": "Pacific Standard Time",
     "countries": [
       "United States",
       "Canada",
       "Pitcairn Islands"
     ],
-    "utc-offset-seconds": -480.0
+    "offsetMinutes": -480.0
   },
   {
     "code": "PWT",
@@ -1302,7 +1295,7 @@
     "countries": [
       "Palau"
     ],
-    "utc-offset-seconds": 540.0
+    "offsetMinutes": 540.0
   },
   {
     "code": "PYST",
@@ -1310,7 +1303,7 @@
     "countries": [
       "Paraguay"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "PYT",
@@ -1318,7 +1311,7 @@
     "countries": [
       "Paraguay"
     ],
-    "utc-offset-seconds": -240.0
+    "offsetMinutes": -240.0
   },
   {
     "code": "QYZT",
@@ -1326,7 +1319,7 @@
     "countries": [
       "Kazakhstan"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "RET",
@@ -1334,7 +1327,7 @@
     "countries": [
       "Reunion"
     ],
-    "utc-offset-seconds": 240.0
+    "offsetMinutes": 240.0
   },
   {
     "code": "SAKT",
@@ -1342,7 +1335,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "SAMT",
@@ -1350,7 +1343,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 240.0
+    "offsetMinutes": 240.0
   },
   {
     "code": "SAST",
@@ -1360,7 +1353,7 @@
       "Lesotho",
       "Eswatini"
     ],
-    "utc-offset-seconds": 120.0
+    "offsetMinutes": 120.0
   },
   {
     "code": "SBT",
@@ -1368,7 +1361,7 @@
     "countries": [
       "Solomon Islands"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "SCT",
@@ -1376,7 +1369,7 @@
     "countries": [
       "Seychelles"
     ],
-    "utc-offset-seconds": 240.0
+    "offsetMinutes": 240.0
   },
   {
     "code": "SGT",
@@ -1384,7 +1377,7 @@
     "countries": [
       "Singapore"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "SRET",
@@ -1392,7 +1385,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "SRT",
@@ -1400,7 +1393,7 @@
     "countries": [
       "Suriname"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "SST",
@@ -1408,7 +1401,7 @@
     "countries": [
       "American Samoa"
     ],
-    "utc-offset-seconds": -660.0
+    "offsetMinutes": -660.0
   },
   {
     "code": "TAHT",
@@ -1416,7 +1409,7 @@
     "countries": [
       "French Polynesia"
     ],
-    "utc-offset-seconds": -600.0
+    "offsetMinutes": -600.0
   },
   {
     "code": "TFT",
@@ -1424,7 +1417,7 @@
     "countries": [
       "Heard Island and McDonald Islands"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "TJT",
@@ -1432,7 +1425,7 @@
     "countries": [
       "Tajikistan"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "TKT",
@@ -1440,7 +1433,7 @@
     "countries": [
       "Tokelau"
     ],
-    "utc-offset-seconds": 780.0
+    "offsetMinutes": 780.0
   },
   {
     "code": "TLT",
@@ -1448,7 +1441,7 @@
     "countries": [
       "East Timor"
     ],
-    "utc-offset-seconds": 540.0
+    "offsetMinutes": 540.0
   },
   {
     "code": "TMT",
@@ -1456,7 +1449,7 @@
     "countries": [
       "Turkmenistan"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "TOT",
@@ -1464,7 +1457,7 @@
     "countries": [
       "Tonga"
     ],
-    "utc-offset-seconds": 780.0
+    "offsetMinutes": 780.0
   },
   {
     "code": "TRT",
@@ -1472,7 +1465,7 @@
     "countries": [
       "Turkey"
     ],
-    "utc-offset-seconds": 180.0
+    "offsetMinutes": 180.0
   },
   {
     "code": "TVT",
@@ -1480,7 +1473,7 @@
     "countries": [
       "Tuvalu"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "ULAT",
@@ -1488,7 +1481,7 @@
     "countries": [
       "Mongolia"
     ],
-    "utc-offset-seconds": 480.0
+    "offsetMinutes": 480.0
   },
   {
     "code": "UYT",
@@ -1496,7 +1489,7 @@
     "countries": [
       "Uruguay"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "UZT",
@@ -1504,7 +1497,7 @@
     "countries": [
       "Uzbekistan"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   },
   {
     "code": "VET",
@@ -1512,7 +1505,7 @@
     "countries": [
       "Venezuela"
     ],
-    "utc-offset-seconds": -240.0
+    "offsetMinutes": -240.0
   },
   {
     "code": "VLAT",
@@ -1520,7 +1513,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 600.0
+    "offsetMinutes": 600.0
   },
   {
     "code": "VOST",
@@ -1528,7 +1521,7 @@
     "countries": [
       "Antarctica"
     ],
-    "utc-offset-seconds": 360.0
+    "offsetMinutes": 360.0
   },
   {
     "code": "VUT",
@@ -1536,7 +1529,7 @@
     "countries": [
       "Vanuatu"
     ],
-    "utc-offset-seconds": 660.0
+    "offsetMinutes": 660.0
   },
   {
     "code": "WAT",
@@ -1544,7 +1537,7 @@
     "countries": [
       "Sao Tome and Principe"
     ],
-    "utc-offset-seconds": 0.0
+    "offsetMinutes": 0.0
   },
   {
     "code": "WAT",
@@ -1562,7 +1555,7 @@
       "Niger",
       "Benin"
     ],
-    "utc-offset-seconds": 60.0
+    "offsetMinutes": 60.0
   },
   {
     "code": "WEST",
@@ -1572,7 +1565,7 @@
       "Faroe Islands",
       "Portugal"
     ],
-    "utc-offset-seconds": 60.0
+    "offsetMinutes": 60.0
   },
   {
     "code": "WET",
@@ -1582,7 +1575,7 @@
       "Faroe Islands",
       "Portugal"
     ],
-    "utc-offset-seconds": 0.0
+    "offsetMinutes": 0.0
   },
   {
     "code": "WET",
@@ -1591,7 +1584,7 @@
       "Morocco",
       "Western Sahara"
     ],
-    "utc-offset-seconds": 60.0
+    "offsetMinutes": 60.0
   },
   {
     "code": "WFT",
@@ -1599,7 +1592,7 @@
     "countries": [
       "Wallis and Futuna"
     ],
-    "utc-offset-seconds": 720.0
+    "offsetMinutes": 720.0
   },
   {
     "code": "WGST",
@@ -1607,7 +1600,7 @@
     "countries": [
       "Greenland"
     ],
-    "utc-offset-seconds": -120.0
+    "offsetMinutes": -120.0
   },
   {
     "code": "WGT",
@@ -1615,7 +1608,7 @@
     "countries": [
       "Greenland"
     ],
-    "utc-offset-seconds": -180.0
+    "offsetMinutes": -180.0
   },
   {
     "code": "WIT",
@@ -1623,7 +1616,7 @@
     "countries": [
       "Indonesia"
     ],
-    "utc-offset-seconds": 420.0
+    "offsetMinutes": 420.0
   },
   {
     "code": "WSDT",
@@ -1631,7 +1624,7 @@
     "countries": [
       "Samoa"
     ],
-    "utc-offset-seconds": 840.0
+    "offsetMinutes": 840.0
   },
   {
     "code": "WST",
@@ -1639,7 +1632,7 @@
     "countries": [
       "Samoa"
     ],
-    "utc-offset-seconds": 780.0
+    "offsetMinutes": 780.0
   },
   {
     "code": "XJT",
@@ -1647,7 +1640,7 @@
     "countries": [
       "China"
     ],
-    "utc-offset-seconds": 360.0
+    "offsetMinutes": 360.0
   },
   {
     "code": "YAKT",
@@ -1655,7 +1648,7 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 540.0
+    "offsetMinutes": 540.0
   },
   {
     "code": "YEKT",
@@ -1663,6 +1656,6 @@
     "countries": [
       "Russia"
     ],
-    "utc-offset-seconds": 300.0
+    "offsetMinutes": 300.0
   }
 ]
