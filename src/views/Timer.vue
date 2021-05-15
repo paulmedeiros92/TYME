@@ -6,9 +6,17 @@
       @click="clickClose"
       icon="times-circle"
     />
-    <h1>{{ timeDisplay }}</h1>
+    <h1>
+      <span>{{ time.format('HH') }}</span>
+      <span class="punctuation">:</span>
+      <span>{{ time.format('mm') }}</span>
+    </h1>
     <h2>{{ timezoneDisplay }}</h2>
-    <h3>{{ time.format('MMMM DD dddd YYYY') }}</h3>
+    <h3>
+      <span>{{ time.format('dddd MMMM DD') }}</span>
+      <span class="punctuation">,</span>
+      <span>{{ time.format(' YYYY') }}</span>
+    </h3>
   </div>
 </template>
 
@@ -55,8 +63,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+h1 {
+  font-size: 2.5rem;
+}
+
 .timer {
-  border: solid black;
+  box-shadow: 4px 4px $color-shadow;
+  border: solid 1px $color-shadow;
+  border-radius: 1rem;
   flex-grow: 1;
   margin: 20px;
   position: relative;
@@ -66,6 +80,11 @@ export default defineComponent({
     top: 1rem;
     right: 1rem;
     cursor: pointer;
+    color: $color-close;
+  }
+
+  .punctuation {
+    color: $color-close;
   }
 }
 </style>

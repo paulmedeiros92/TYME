@@ -1,11 +1,17 @@
 <template>
   <div class="search">
-    <label for="add-clock">Add a clock!</label>
+    <label class="title" for="add-clock">Add a clock!</label>
     <div class="autocomplete">
-      <div class="search">
-        <input class="search-input" type="search" v-model="searchString" />
+      <div class="search-form">
+        <input
+          class="search-input"
+          :class="{ active: filteredZones.length > 0 }"
+          type="search"
+          v-model="searchString"
+        />
         <select
           class="search-parameter"
+          :class="{ active: filteredZones.length > 0 }"
           v-model="searchParameter"
         >
           <option
@@ -36,8 +42,11 @@
         v-if="selectedTime"
         :timezone="selectedTime"
     />
-    <button @click="addTimezone(selectedTime)">
-      Add
+    <button
+      class="button"
+      @click="addTimezone(selectedTime)"
+    >
+      ADD
     </button>
   </div>
 </template>
@@ -113,37 +122,99 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+.search {
+  margin-top: 3rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .button {
+    background-color: $color-background;
+    border: solid 1px $color-close;
+    border-radius: .5rem;
+    box-shadow: 2px 2px $color-close;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-parameters;
+
+    &:active {
+      box-shadow: -2px -2px $color-shadow;
+      border: solid 1px $color-shadow;
+      color: $color-close;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
 .autocomplete {
   position: relative;
+  height: 2rem;
 
-  .search {
+  .search-form {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 
     .search-input {
       width: 250px;
+      background-color: $color-input;
+      border: solid 1px #d9b08c;
+      border-radius: .5rem 0 0 .5rem;
+      font-size: 1rem;
+      color: $color-background;
+      padding: .4rem;
+
+      &.active {
+        border-radius: .5rem 0 0 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
 
     .search-parameter {
       width: 150px;
+      border: none;
+      border-radius: 0 .5rem .5rem 0;
+      background-color: $color-parameters;
+      font-size: 1rem;
+      color: $color-shadow;
+      padding: .4rem;
+
+      &.active {
+        border-radius: 0 .5rem 0 0;
+      }    border: solid 1px $color-close;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
   .search-results {
     position: absolute;
     left: 50%;
-    top: 1.5rem;
+    top: 2rem;
     transform: translateX(-50%);
     height: 200px;
     width: 400px;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 3;
-    background-color: white;
+    background-color: $color-shadow;
+    border-radius: 0 0 .5rem .5rem;
 
     .search-result {
+      text-align: left;
+      padding: .4rem;
       &:hover {
-        background-color: aqua;
+        background-color: $color-close;
+        color: $color-shadow;
       }
     }
   }
