@@ -15,15 +15,17 @@
       <span>{{ time.format('mm') }}</span>
     </h1>
     <h3>
-      <div class="flair">{{ time.format('dddd')}}</div>
+      <div>{{ time.format('dddd')}}</div>
       <div>
-        <span>{{ time.format('MMMM D, YYYY') }}</span>
+        {{ time.format('MMMM D, YYYY') }}
       </div>
     </h3>
     <h3 v-if="timezone">
       {{ `${timezone.city}, ${timezone.iso3}` }}
     </h3>
-    <h3 v-else>YOUR TYME</h3>
+    <h3 v-else>
+      YOUR T<span class="flair">Y</span>ME
+    </h3>
   </div>
 </template>
 
@@ -70,7 +72,7 @@ h1 {
 
 .timer {
   flex-grow: 1;
-  padding: 20px;
+  padding: 40px;
   position: relative;
   color: $color-background;
 

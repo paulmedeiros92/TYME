@@ -1,5 +1,8 @@
 <template>
   <div class="header">
+    <div class="title" for="add-clock">
+      Add a T<span class="flair">Y</span>ME!
+    </div>
     <Search />
   </div>
 </template>
@@ -17,6 +20,12 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .header {
-  padding: 40px;
+  padding: 60px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 </style>

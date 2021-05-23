@@ -1,10 +1,5 @@
 <template>
   <div class="search">
-    <label class="title" for="add-clock">
-      <span>Add a T</span>
-      <span class="flair">Y</span>
-      <span>ME!</span>
-    </label>
     <div class="autocomplete">
       <div class="search-form">
         <input
@@ -12,6 +7,7 @@
           :class="{ active: filteredZones.length > 0 }"
           type="search"
           v-model="searchString"
+          placeholder="Las Vegas"
         />
       </div>
       <div
@@ -45,6 +41,7 @@ export default defineComponent({
   data() {
     return {
       searchString: '',
+      focus: '',
     };
   },
   methods: {
@@ -63,14 +60,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.search {
-
-  .title {
-    font-size: 2rem;
-    font-weight: 600;
-  }
-}
-
 .autocomplete {
   position: relative;
   height: 2rem;
@@ -82,8 +71,8 @@ export default defineComponent({
 
     .search-input {
       width: 400px;
-      background-color: $color-input;
-      border: solid 1px #d9b08c;
+      background-color: $color-close;
+      border: solid 1px $color-close;
       font-size: 1rem;
       padding: .4rem;
 
