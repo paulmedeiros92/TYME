@@ -1,90 +1,84 @@
 <template>
-  <div class="timer">
+  <div
+    class="timer"
+    :style="{backgroundColor: color}"
+  >
     <fa-icon
       v-if="close"
-      class="close"
+      class="close flair"
       @click="clickClose"
       icon="times-circle"
     />
     <h1>
       <span>{{ time.format('HH') }}</span>
-      <span class="punctuation">:</span>
+      <span class="flair">:</span>
       <span>{{ time.format('mm') }}</span>
     </h1>
-    <h2>{{ timezoneDisplay }}</h2>
     <h3>
-      <span>{{ time.format('dddd MMMM DD') }}</span>
-      <span class="punctuation">,</span>
-      <span>{{ time.format(' YYYY') }}</span>
+      <div class="flair">{{ time.format('dddd')}}</div>
+      <div>
+        <span>{{ time.format('MMMM D, YYYY') }}</span>
+      </div>
     </h3>
+    <h3 v-if="timezone">
+      {{ `${timezone.city}, ${timezone.iso3}` }}
+    </h3>
+    <h3 v-else>YOUR TYME</h3>
   </div>
 </template>
 
 <script lang="js">
 import { defineComponent } from 'vue';
-import Timezone from '@/time-zones/Timezone';
 
 export default defineComponent({
   props: {
     timezone: {
-      type: Timezone,
+      type: Object,
       default: null,
     },
     close: {
-      type: Function,
-      default: null,
+      type: Boolean,
+      default: true,
+    },
+    color: {
+      type: String,
+      default: '#EEEEEE',
     },
   },
   methods: {
     clickClose() {
-      this.close(this.timezone);
+      this.$store.dispatch('removeZone', this.timezone.timezone);
     },
   },
   computed: {
     time() {
-      if (this.timezone === null) {
+      const { timezone } = this;
+      if (timezone === null) {
         return this.$store.state.time;
       }
-      const { offsetMinutes } = this.timezone;
-      return this.$store.state.time.utcOffset(offsetMinutes);
-    },
-    timezoneDisplay() {
-      if (this.timezone === null) {
-        return 'Local';
-      }
-      const { code, name } = this.timezone;
-      return `${name} (${code})`;
-    },
-    timeDisplay() {
-      return this.time.format('HH:mm');
+      return this.$store.state.time.tz(timezone.timezone);
     },
   },
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 h1 {
   font-size: 2.5rem;
+  margin-bottom: 0;
 }
 
 .timer {
-  box-shadow: 4px 4px $color-shadow;
-  border: solid 1px $color-shadow;
-  border-radius: 1rem;
   flex-grow: 1;
-  margin: 20px;
+  padding: 20px;
   position: relative;
+  color: $color-background;
 
   .close {
     position: absolute;
     top: 1rem;
     right: 1rem;
     cursor: pointer;
-    color: $color-close;
-  }
-
-  .punctuation {
-    color: $color-close;
   }
 }
 </style>

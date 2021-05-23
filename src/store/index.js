@@ -1,10 +1,12 @@
 import { createStore } from 'vuex';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
+import tz from 'dayjs/plugin/timezone';
 import Cookies from 'js-cookie';
-import Timezone from '@/time-zones/Timezone';
+import * as cityTimezones from 'city-timezones';
 
 dayjs.extend(utc);
+dayjs.extend(tz);
 
 export default createStore({
   state: {
@@ -28,7 +30,7 @@ export default createStore({
     },
     removeTimezone(state, timezone) {
       const timezones = state.timezones
-        .filter((zone) => zone.code !== timezone.code);
+        .filter((zone) => zone.timezone !== timezone);
       state.timezones = timezones;
       Cookies.set('timezones', JSON.stringify(timezones));
     },
@@ -41,9 +43,9 @@ export default createStore({
       const cookie = Cookies.get('timezones') ? JSON.parse(Cookies.get('timezones')) : null;
       if (!cookie) {
         const defaultZones = [
-          new Timezone('CEST', 'Central European SummerTime', 120),
-          new Timezone('EST', 'Eastern Standard Time', -300),
-          new Timezone('MDT', 'Mountain Daylight Time', -360),
+          cityTimezones.lookupViaCity('Cairo')[0],
+          cityTimezones.lookupViaCity('Amsterdam')[0],
+          cityTimezones.lookupViaCity('Denver')[0],
         ];
         Cookies.set('timezones', JSON.stringify(defaultZones));
         commit(

@@ -1,68 +1,47 @@
 <template>
   <div class="dashboard">
-    <div class="local-time">
-      <Timer />
-    </div>
+    <Header />
     <div class="other-times">
       <Timer
-        v-for="timezone in dashTimezones"
-        :key="timezone.name"
+        v-for="(timezone, i) in timezones"
+        :key="timezone.city"
         :timezone="timezone"
-        :close="removeTimezone"
+        :color="getColor(i)"
       />
     </div>
-    <Search :selectedZone="selectedTime" />
+        <div class="local-time">
+      <Timer :close="false" />
+    </div>
   </div>
 </template>
 
-<script lang="js">
+<script lang="js" scoped>
 import { defineComponent } from 'vue';
-import Timezone from '@/time-zones/Timezone';
+import { mapState } from 'vuex';
 import Timer from './Timer.vue';
-import Search from './Search.vue';
-
-const timezones = require('../time-zones/time-zones.json');
+import Header from './Header.vue';
 
 export default defineComponent({
   components: {
     Timer,
-    Search,
+    Header,
+  },
+  data() {
+    return {
+      colors: ['#116466', '#ffcb9a', '#d1e8e2', '#d9b08c', '#d1e8e2'],
+    };
   },
   mounted() {
     this.$store.dispatch('loadCookie');
     this.$store.dispatch('startTimer');
   },
-  data() {
-    return {
-      timezones,
-      selectedTime: new Timezone(
-        timezones[0].code,
-        timezones[0].name,
-        timezones[0].offsetMinutes,
-      ),
-    };
-  },
   methods: {
-    setSelected(zoneCode) {
-      const timezone = timezones.find((zone) => zone.code === zoneCode);
-      this.selectedTime = new Timezone(
-        timezone.code,
-        timezone.name,
-        timezone.offsetMinutes,
-      );
-    },
-    addTimezone(timezone) {
-      this.$store.dispatch('addZone', timezone);
-    },
-    removeTimezone(timezone) {
-      this.$store.dispatch('removeZone', timezone);
+    getColor(i) {
+      const { colors } = this;
+      return colors[i % colors.length];
     },
   },
-  computed: {
-    dashTimezones() {
-      return this.$store.state.timezones;
-    },
-  },
+  computed: mapState(['timezones']),
 });
 </script>
 
