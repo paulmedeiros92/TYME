@@ -6,7 +6,8 @@
           class="search-input"
           :class="{ active: filteredZones.length > 0 }"
           type="search"
-          v-model="searchString"
+          :value="searchString"
+          @input="event => searchString = event.target.value"
           placeholder="Las Vegas"
         />
       </div>
