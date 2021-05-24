@@ -70,7 +70,7 @@ export default defineComponent({
     transform: translateX(-50%);
 
     .search-input {
-      width: 400px;
+      width: 300px;
       background-color: $color-close;
       border: solid 1px $color-close;
       font-size: 1rem;
@@ -87,7 +87,7 @@ export default defineComponent({
     top: 2rem;
     transform: translateX(-50%);
     height: 200px;
-    width: 400px;
+    width: 300px;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 3;

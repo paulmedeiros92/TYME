@@ -72,6 +72,7 @@ h1 {
 
 .timer {
   flex-grow: 1;
+  min-width: 300px;
   padding: 40px;
   position: relative;
   color: $color-background;

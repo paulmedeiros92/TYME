@@ -48,5 +48,6 @@ export default defineComponent({
 <style lang="scss">
 .other-times {
   display: flex;
+  flex-wrap: wrap;
 }
 </style>
