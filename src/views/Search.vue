@@ -50,6 +50,11 @@ export default defineComponent({
       focusIndex: null,
     };
   },
+  updated() {
+    if (this.searchString) {
+      this.$refs.focus.scrollIntoView();
+    }
+  },
   methods: {
     addTimezone(timezone) {
       this.searchString = '';
@@ -57,14 +62,14 @@ export default defineComponent({
     },
     onInput(event) {
       this.searchString = event.target.value;
+      this.focusIndex = 0;
     },
     onKeyDown() {
-      const { focusIndex } = this;
+      const { focusIndex, filteredZones } = this;
       if (focusIndex === null) {
         this.focusIndex = 0;
-      } else if (focusIndex >= 0) {
+      } else if (focusIndex >= 0 && focusIndex < filteredZones.length - 1) {
         this.focusIndex += 1;
-        this.$refs.focus.scrollIntoView();
       }
     },
     onKeyUp() {
@@ -73,7 +78,6 @@ export default defineComponent({
         this.focusIndex = 0;
       } else if (focusIndex > 0) {
         this.focusIndex -= 1;
-        this.$refs.focus.scrollIntoView();
       }
     },
     onKeyEnter() {
