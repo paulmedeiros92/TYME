@@ -24,7 +24,8 @@ export default createStore({
       state.timezones = zoneArray;
     },
     addTimezone(state, timezone) {
-      const timezones = [...state.timezones, timezone];
+      const timezones = [...state.timezones];
+      timezones.unshift(timezone);
       state.timezones = timezones;
       Cookies.set('timezones', JSON.stringify(timezones));
     },

@@ -7,7 +7,10 @@
           :class="{ active: filteredZones.length > 0 }"
           type="search"
           :value="searchString"
-          @input="event => searchString = event.target.value"
+          @input="onInput"
+          v-on:keyup.down="onKeyDown"
+          v-on:keyup.up="onKeyUp"
+          v-on:keyup.enter="onKeyEnter"
           placeholder="Las Vegas"
         />
       </div>
@@ -16,9 +19,11 @@
         class="search-results"
       >
         <div
-          v-for="timezone in filteredZones"
+          v-for="(timezone, index) in filteredZones"
           :key="timezone.lat + timezone.lng"
           class="search-result"
+          :class="{ focus: index === focusIndex}"
+          :ref="index === focusIndex ? 'focus': ''"
           @click="addTimezone(timezone)"
         >
           {{ `${timezone.city}, ${timezone.country}, ${timezone.timezone}` }}
@@ -42,13 +47,38 @@ export default defineComponent({
   data() {
     return {
       searchString: '',
-      focus: '',
+      focusIndex: null,
     };
   },
   methods: {
     addTimezone(timezone) {
       this.searchString = '';
       this.$store.dispatch('addZone', timezone);
+    },
+    onInput(event) {
+      this.searchString = event.target.value;
+    },
+    onKeyDown() {
+      const { focusIndex } = this;
+      if (focusIndex === null) {
+        this.focusIndex = 0;
+      } else if (focusIndex >= 0) {
+        this.focusIndex += 1;
+        this.$refs.focus.scrollIntoView();
+      }
+    },
+    onKeyUp() {
+      const { focusIndex } = this;
+      if (focusIndex === null) {
+        this.focusIndex = 0;
+      } else if (focusIndex > 0) {
+        this.focusIndex -= 1;
+        this.$refs.focus.scrollIntoView();
+      }
+    },
+    onKeyEnter() {
+      const { focusIndex, filteredZones } = this;
+      this.addTimezone(filteredZones[focusIndex]);
     },
   },
   computed: {
@@ -100,6 +130,11 @@ export default defineComponent({
       &:hover {
         background-color: $color-close;
         color: $color-shadow;
+      }
+      &.focus {
+        background-color: $color-close;
+        color: $color-shadow;
+        scroll-snap-align: center;
       }
     }
   }
