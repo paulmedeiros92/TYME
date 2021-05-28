@@ -58,7 +58,9 @@ export default defineComponent({
   methods: {
     addTimezone(timezone) {
       this.searchString = '';
-      this.$store.dispatch('addZone', timezone);
+      if (timezone) {
+        this.$store.dispatch('addZone', timezone);
+      }
     },
     onInput(event) {
       this.searchString = event.target.value;
