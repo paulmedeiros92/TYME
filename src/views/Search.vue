@@ -14,21 +14,20 @@
           placeholder="Las Vegas"
         />
       </div>
-      <div
-        v-if="filteredZones.length > 0"
-        class="search-results"
-      >
-        <div
-          v-for="(timezone, index) in filteredZones"
-          :key="timezone.lat + timezone.lng"
-          class="search-result"
-          :class="{ focus: index === focusIndex}"
-          :ref="index === focusIndex ? 'focus': ''"
-          @click="addTimezone(timezone)"
-        >
-          {{ `${timezone.city}, ${timezone.country}, ${timezone.timezone}` }}
+      <Transition>
+        <div v-if="filteredZones.length > 0" class="search-results">
+          <div
+            v-for="(timezone, index) in filteredZones"
+            :key="timezone.lat + timezone.lng"
+            class="search-result"
+            :class="{ focus: index === focusIndex }"
+            :ref="index === focusIndex ? 'focus' : ''"
+            @click="addTimezone(timezone)"
+          >
+            {{ `${timezone.city}, ${timezone.country}, ${timezone.timezone}` }}
+          </div>
         </div>
-      </div>
+      </Transition>
     </div>
   </div>
 </template>
@@ -97,6 +96,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+$color-search: #abedc6;
+$color-shadow: #ffffff;
 .autocomplete {
   position: relative;
   height: 2rem;
@@ -105,13 +106,16 @@ export default defineComponent({
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
 
     .search-input {
-      width: 300px;
-      background-color: $color-close;
-      border: solid 1px $color-close;
+      width: 100%;
+      background-color: $color-search;
+      border: solid 1px $color-search;
+      border-radius: 5px;
       font-size: 1rem;
-      padding: .4rem;
+      padding: 0.4rem;
+      color: $color-font;
 
       &:focus {
         outline: none;
@@ -124,7 +128,8 @@ export default defineComponent({
     top: 2rem;
     transform: translateX(-50%);
     height: 200px;
-    width: 300px;
+    width: 100%;
+    border-radius: 5px;
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 3;
@@ -132,17 +137,29 @@ export default defineComponent({
 
     .search-result {
       text-align: left;
-      padding: .4rem;
+      padding: 0.4rem;
+      border-radius: 5px;
       &:hover {
-        background-color: $color-close;
-        color: $color-shadow;
+        background-color: $color-search;
+        color: $color-font;
       }
       &.focus {
-        background-color: $color-close;
-        color: $color-shadow;
+        background-color: $color-search;
+        color: $color-font;
         scroll-snap-align: center;
       }
     }
   }
+}
+
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

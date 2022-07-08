@@ -1,8 +1,6 @@
 <template>
-  <div class="header">
-    <div class="title" for="add-clock">
-      Add a T<span class="flair">Y</span>ME!
-    </div>
+  <div class="add">
+    <div class="title" for="add-clock">Add a T<span class="flair">Y</span>ME!</div>
     <Search />
   </div>
 </template>
@@ -19,8 +17,13 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.header {
-  padding: 60px;
+.add {
+  min-width: 100px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .title {

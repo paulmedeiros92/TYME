@@ -1,14 +1,16 @@
 <template>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
 html {
   background-color: $color-background;
+  height: 100%;
 }
 
 body {
   margin: 0;
+  height: 100%;
 }
 
 #app {
@@ -17,6 +19,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $color-font;
+  height: 100%;
 }
 
 #nav {

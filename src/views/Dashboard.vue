@@ -1,17 +1,13 @@
 <template>
   <div class="dashboard">
-    <Header />
-    <div class="other-times">
-      <Timer
-        v-for="(timezone, i) in timezones"
-        :key="timezone.city"
-        :timezone="timezone"
-        :color="getColor(i)"
-      />
-    </div>
-        <div class="local-time">
-      <Timer :close="false" />
-    </div>
+    <Timer :close="false" />
+    <Timer
+      v-for="(timezone, i) in timezones"
+      :key="timezone.city"
+      :timezone="timezone"
+      :color="getColor(i)"
+    />
+    <Add :close="false" />
   </div>
 </template>
 
@@ -19,16 +15,16 @@
 import { defineComponent } from 'vue';
 import { mapState } from 'vuex';
 import Timer from './Timer.vue';
-import Header from './Header.vue';
+import Add from './Add.vue';
 
 export default defineComponent({
   components: {
     Timer,
-    Header,
+    Add,
   },
   data() {
     return {
-      colors: ['#116466', '#ffcb9a', '#d1e8e2', '#d9b08c', '#d1e8e2'],
+      colors: ['#B9FFB7', '#ABEDC6', '#98D9C2', '#F19A3E'],
     };
   },
   mounted() {
@@ -46,8 +42,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.other-times {
+.dashboard {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row;
+  height: 100%;
 }
 </style>

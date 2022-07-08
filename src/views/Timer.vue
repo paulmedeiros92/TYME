@@ -1,31 +1,21 @@
 <template>
-  <div
-    class="timer"
-    :style="{backgroundColor: color}"
-  >
-    <fa-icon
-      v-if="close"
-      class="close flair"
-      @click="clickClose"
-      icon="times-circle"
-    />
+  <div class="timer" :style="{ backgroundColor: color }">
+    <fa-icon v-if="close" class="close flair" @click="clickClose" icon="times-circle" />
     <h1>
-      <span>{{ time.format('HH') }}</span>
+      <span>{{ time.format("HH") }}</span>
       <span class="flair">:</span>
-      <span>{{ time.format('mm') }}</span>
+      <span>{{ time.format("mm") }}</span>
     </h1>
     <h3>
-      <div>{{ time.format('dddd')}}</div>
+      <div>{{ time.format("dddd") }}</div>
       <div>
-        {{ time.format('MMMM D, YYYY') }}
+        {{ time.format("MMMM D, YYYY") }}
       </div>
     </h3>
     <h3 v-if="timezone">
       {{ `${timezone.city}, ${timezone.iso3}` }}
     </h3>
-    <h3 v-else>
-      YOUR T<span class="flair">Y</span>ME
-    </h3>
+    <h3 v-else>YOUR T<span class="flair">Y</span>ME</h3>
   </div>
 </template>
 
@@ -72,16 +62,27 @@ h1 {
 
 .timer {
   flex-grow: 1;
-  min-width: 300px;
-  padding: 40px;
+  min-width: 100px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   position: relative;
-  color: $color-background;
+  color: $color-font;
+
+  &:hover > .close {
+    opacity: 1;
+  }
 
   .close {
     position: absolute;
     top: 1rem;
     right: 1rem;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
   }
 }
 </style>
