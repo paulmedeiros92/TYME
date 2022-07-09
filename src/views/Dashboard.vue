@@ -2,9 +2,9 @@
   <div class="dashboard">
     <Timer :close="false" />
     <Timer
-      v-for="(timezone, i) in timezones"
-      :key="timezone.city"
-      :timezone="timezone"
+      v-for="(time, i) in times"
+      :key="time.city"
+      :timezone="time"
       :color="getColor(i)"
     />
     <Add :close="false" />
@@ -37,7 +37,12 @@ export default defineComponent({
       return colors[i % colors.length];
     },
   },
-  computed: mapState(['timezones']),
+  computed: {
+    ...mapState(['timezones']),
+    times() {
+      return Object.values(this.timezones);
+    },
+  },
 });
 </script>
 

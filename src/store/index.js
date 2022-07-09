@@ -12,7 +12,7 @@ export default createStore({
   state: {
     intervalId: -1,
     time: dayjs(),
-    timezones: [],
+    timezones: {},
   },
   mutations: {
     startTime(state) {
@@ -24,15 +24,16 @@ export default createStore({
       state.timezones = zoneArray;
     },
     addTimezone(state, timezone) {
-      const timezones = [...state.timezones];
-      timezones.unshift(timezone);
+      const timezones = { ...state.timezones };
+      timezones[timezone.city] = timezone;
       state.timezones = timezones;
       Cookies.set('timezones', JSON.stringify(timezones));
     },
     removeTimezone(state, timezone) {
-      const timezones = state.timezones
-        .filter((zone) => zone.timezone !== timezone);
-      state.timezones = timezones;
+      const { timezones } = state;
+      const tmp = timezones;
+      delete tmp[timezone.city];
+      state.timezones = tmp;
       Cookies.set('timezones', JSON.stringify(timezones));
     },
   },
@@ -43,16 +44,15 @@ export default createStore({
     loadCookie({ commit }) {
       const cookie = Cookies.get('timezones') ? JSON.parse(Cookies.get('timezones')) : null;
       if (!cookie) {
-        const defaultZones = [
-          cityTimezones.lookupViaCity('Cairo')[0],
-          cityTimezones.lookupViaCity('Amsterdam')[0],
-          cityTimezones.lookupViaCity('Denver')[0],
-        ];
+        const cairo = cityTimezones.lookupViaCity('Cairo')[0];
+        const israel = cityTimezones.lookupViaCity('Jerusalem')[0];
+        const denver = cityTimezones.lookupViaCity('Denver')[0];
+        const defaultZones = {};
+        defaultZones[cairo.city] = cairo;
+        defaultZones[israel.city] = israel;
+        defaultZones[denver.city] = denver;
         Cookies.set('timezones', JSON.stringify(defaultZones));
-        commit(
-          'setDashboard',
-          defaultZones,
-        );
+        commit('setDashboard', defaultZones);
       } else {
         commit('setDashboard', cookie);
       }

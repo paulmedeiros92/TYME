@@ -39,7 +39,7 @@ export default defineComponent({
   },
   methods: {
     clickClose() {
-      this.$store.dispatch('removeZone', this.timezone.timezone);
+      this.$store.dispatch('removeZone', this.timezone);
     },
   },
   computed: {
