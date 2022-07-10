@@ -18,13 +18,13 @@
         <div v-if="filteredZones.length > 0" class="search-results">
           <div
             v-for="(timezone, index) in filteredZones"
-            :key="timezone.lat + timezone.lng"
+            :key="index"
             class="search-result"
             :class="{ focus: index === focusIndex }"
             :ref="index === focusIndex ? 'focus' : ''"
             @click="addTimezone(timezone)"
           >
-            {{ `${timezone.city}, ${timezone.country}, ${timezone.timezone}` }}
+            {{ `${timezone.city}, ${timezone.country}, ${timezone.UtcOffset}` }}
           </div>
         </div>
       </Transition>
@@ -35,6 +35,10 @@
 <script lang="js">
 import { defineComponent } from 'vue';
 import * as cityTimezones from 'city-timezones';
+import dayjs from 'dayjs';
+import tz from 'dayjs/plugin/timezone';
+
+dayjs.extend(tz);
 
 export default defineComponent({
   props: {
@@ -47,6 +51,7 @@ export default defineComponent({
     return {
       searchString: '',
       focusIndex: null,
+      time: dayjs(),
     };
   },
   updated() {
@@ -89,7 +94,10 @@ export default defineComponent({
   computed: {
     filteredZones() {
       const { searchString } = this;
-      return cityTimezones.findFromCityStateProvince(searchString);
+      return cityTimezones.findFromCityStateProvince(searchString).slice(0, 50).map((time) => ({
+        ...time,
+        UtcOffset: time.timezone ? `${this.time.tz(time.timezone).format('Z')} UTC` : 'N/A',
+      }));
     },
   },
 });
@@ -119,6 +127,10 @@ $color-shadow: #ffffff;
 
       &:focus {
         outline: none;
+      }
+
+      ::-webkit-search-cancel-button{
+        color: $color-flair;
       }
     }
   }

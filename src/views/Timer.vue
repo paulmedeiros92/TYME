@@ -12,9 +12,12 @@
         {{ time.format("MMMM D, YYYY") }}
       </div>
     </h3>
-    <h3 v-if="timezone">
+          <h3>
+        {{ `${time.format("Z")} UTC` }}
+      </h3>
+    <h2 v-if="timezone">
       {{ `${timezone.city}, ${timezone.iso3}` }}
-    </h3>
+    </h2>
     <h3 v-else>YOUR T<span class="flair">Y</span>ME</h3>
   </div>
 </template>
