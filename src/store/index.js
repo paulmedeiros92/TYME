@@ -45,12 +45,12 @@ export default createStore({
       const cookie = Cookies.get('timezones') ? JSON.parse(Cookies.get('timezones')) : null;
       if (!cookie) {
         const cairo = cityTimezones.lookupViaCity('Cairo')[0];
-        const israel = cityTimezones.lookupViaCity('Jerusalem')[0];
-        const denver = cityTimezones.lookupViaCity('Denver')[0];
+        const jerusalem = cityTimezones.lookupViaCity('Jerusalem')[0];
+        const newYork = cityTimezones.lookupViaCity('New York')[0];
         const defaultZones = {};
         defaultZones[cairo.city] = cairo;
-        defaultZones[israel.city] = israel;
-        defaultZones[denver.city] = denver;
+        defaultZones[jerusalem.city] = jerusalem;
+        defaultZones[newYork.city] = newYork;
         Cookies.set('timezones', JSON.stringify(defaultZones));
         commit('setDashboard', defaultZones);
       } else {

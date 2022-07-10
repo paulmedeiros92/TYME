@@ -21,7 +21,7 @@
             :key="index"
             class="search-result"
             :class="{ focus: index === focusIndex }"
-            :ref="index === focusIndex ? 'focus' : ''"
+            :ref="`focus${index}`"
             @click="addTimezone(timezone)"
           >
             {{ `${timezone.city}, ${timezone.country}, ${timezone.UtcOffset}` }}
@@ -37,6 +37,7 @@ import { defineComponent } from 'vue';
 import * as cityTimezones from 'city-timezones';
 import dayjs from 'dayjs';
 import tz from 'dayjs/plugin/timezone';
+import { nextTick } from 'process';
 
 dayjs.extend(tz);
 
@@ -54,10 +55,14 @@ export default defineComponent({
       time: dayjs(),
     };
   },
-  updated() {
-    if (this.searchString) {
-      this.$refs.focus.scrollIntoView();
-    }
+  watch: {
+    focusIndex(newValue) {
+      if (this.filteredZones.length) {
+        nextTick(() => {
+          this.$refs[`focus${newValue}`].scrollIntoView();
+        });
+      }
+    },
   },
   methods: {
     addTimezone(timezone) {
@@ -129,8 +134,8 @@ $color-shadow: #ffffff;
         outline: none;
       }
 
-      ::-webkit-search-cancel-button{
-        color: $color-flair;
+      &::-webkit-search-cancel-button{
+        -webkit-appearance: none;
       }
     }
   }
@@ -162,16 +167,5 @@ $color-shadow: #ffffff;
       }
     }
   }
-}
-
-/* we will explain what these classes do next! */
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.25s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div class="dashboard">
-    <Timer :close="false" />
-    <Timer
-      v-for="(time, i) in times"
-      :key="time.city"
-      :timezone="time"
-      :color="getColor(i)"
-    />
+    <Timer :close="false"/>
+      <Timer
+        v-for="(time, i) in times"
+        :key="time.city"
+        :timezone="time"
+        :color="getColor(i+1)"
+      />
     <Add :close="false" />
   </div>
 </template>
@@ -24,7 +24,7 @@ export default defineComponent({
   },
   data() {
     return {
-      colors: ['#B9FFB7', '#ABEDC6', '#98D9C2', '#F19A3E'],
+      colors: ['#B9FFB7', '#ABEDC6', '#98D9C2'],
     };
   },
   mounted() {
